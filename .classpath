@@ -10,7 +10,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="src/main/java/lib/gson-2.8.7.jar"/>
-	<classpathentry kind="lib" path="src/main/java/lib/sqlite-jdbc-3.43.0.0.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mariadb-java-client-3.0.11.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
