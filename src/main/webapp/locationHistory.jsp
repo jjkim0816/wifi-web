@@ -58,7 +58,7 @@
 						<td><%= lh.getLnt() %></td>
 						<td><%= lh.getCreatedAt() %></td>
 						<td align="center">
-							<button onclick="location.href='locationHistoryDelete.jsp?id=<%= lh.getId() %>'">삭제</button>
+							<button onclick="location.href='locationHistoryDelete.jsp?id=<%=lh.getId()%>'">삭제</button>
 						</td>
 					</tr>
 					<% } %>
