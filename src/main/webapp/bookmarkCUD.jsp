@@ -11,11 +11,15 @@
 		Connection conn = rConn.getRdbmsConnection();
 		BookmarkService bmService = new BookmarkService();
 		int affected = 0;
+		String xSwifiMainNm = "";
+		int groupBookmarkId = 0;	
 		
 		if (method.equals("add")) {
-			int groupBookmarkId = Integer.parseInt(request.getParameter("bookmarkGroup"));	
-			String xSwifiMainNm = request.getParameter("xSwifiMainNm");
-			affected = bmService.createBookmark(conn, groupBookmarkId, xSwifiMainNm);
+			groupBookmarkId = Integer.parseInt(request.getParameter("bookmarkGroup"));	
+			xSwifiMainNm = request.getParameter("xSwifiMainNm");
+			if (groupBookmarkId != 0) {
+				affected = bmService.createBookmark(conn, groupBookmarkId, xSwifiMainNm);
+			}
 		} else {
 			int id = Integer.parseInt(request.getParameter("id"));
 			affected = bmService.deleteBookmark(conn, id);
@@ -27,7 +31,7 @@
 		<% } else if (method.equals("delete") && affected == 1){ %>
 			alert("북마크 정보를 삭제 하였습니다.");
 		<% } else { %>
-			alert("북마크 작업을 실패 하였습니다. ");
+			alert("북마크 정보를 선택해 후 추가 해주세요.");
 		<% } %>
 
 		location.href = "bookmarkList.jsp";
