@@ -12,6 +12,7 @@
     - docker 및 docker-compose 를 설치한다.  
     - $ docker-compose up -d 수행 한다.  
     - .env 파일을 확인하여 localhost 로 디비를 접속 한다.
+    - 디비 툴로 접속 후 **내 위치 기반 공공 와이파이.sql** 열어서 테이블을 생성한다.
       
 2. 이클립스에서 Web Server 구성
    - java 8 이상 버전 설치
